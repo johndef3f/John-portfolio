@@ -11,7 +11,7 @@ const ytSrc = (id: string) =>
   `&playlist=${id}`;
 
 export default function HeroShowreel({
-  name = "沈習約",
+  name = "John",
   tagline = "Crafting Stories through 3D & Motion",
 }: {
   name?: string;

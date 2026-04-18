@@ -13,10 +13,8 @@ const CREATIVE_MINDSET = [
 ];
 
 const TECHNICAL_ARSENAL = [
-  "Cinema 4D",
-  "Blender",
+  "Autodesk Maya",
   "Unreal Engine",
-  "Houdini",
   "After Effects",
   "Premiere Pro",
   "Photoshop",
@@ -46,20 +44,15 @@ export default function About() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="mt-8 space-y-5 text-base leading-relaxed text-fg/75 sm:text-lg">
+              <div lang="zh-Hant" className="mt-8 space-y-5 text-base leading-relaxed text-fg/75 sm:text-lg">
                 <p>
-                  I&apos;m Paul Shen — a visual creator working at the
-                  intersection of 3D, motion design, and narrative direction.
-                  My practice spans product visualization, CG art, and
-                  directed short-form pieces that turn abstract ideas into
-                  grounded, cinematic moments.
+                  大家好，我是<span className="text-fg">沈習約</span>，目前就讀於<span className="text-fg">國立雲林科技大學 數位媒體設計系</span>。對 3D 建模、動態影像與視覺敘事充滿好奇，正在努力把心裡的畫面，一步一步做出來。
                 </p>
                 <p>
-                  I believe the best work starts from curiosity: reading
-                  widely, researching references from film and design
-                  history, and then translating those observations into
-                  frames and movement. Every project is a chance to make
-                  something feel a little more alive.
+                  作為還在學習路上的學生，我習慣透過觀摩電影、研究設計史，以及大量的課堂與個人練習，慢慢累積屬於自己的視覺語言。每一次打光、建模、剪輯，對我來說都是一次新的實驗和學習。
+                </p>
+                <p>
+                  這個作品集收錄的是我在學期間的課堂與自主作品。它們可能還不夠成熟，但希望能如實呈現我對創作的熱忱與投入。謝謝你願意花時間瀏覽。
                 </p>
               </div>
             </Reveal>

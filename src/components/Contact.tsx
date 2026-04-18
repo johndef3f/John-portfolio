@@ -4,7 +4,7 @@ import { useState } from "react";
 import Reveal from "./Reveal";
 
 // Edit these to your real handles.
-const EMAIL = "paul.shen58@gmail.com";
+const EMAIL = "johnshen200695@gmail.com";
 
 const SOCIALS: { label: string; href: string; icon: JSX.Element }[] = [
   {
@@ -78,8 +78,8 @@ export default function Contact() {
 
         <Reveal delay={0.15}>
           <p className="mt-6 max-w-xl text-balance text-base text-fg/70 sm:text-lg">
-            Open to collaborations, commissions, and full-time roles in 3D,
-            motion, and creative direction.
+            Open to internships, collaborations, and creative projects in 3D,
+            motion, and visual narrative.
           </p>
         </Reveal>
 

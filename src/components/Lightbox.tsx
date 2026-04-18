@@ -17,19 +17,16 @@ const ytEmbed = (id: string) =>
 export default function Lightbox({ work, onClose }: Props) {
   const [idx, setIdx] = useState(0);
 
-  // Images: cover + gallery, flattened for static works
   const images = useMemo(() => {
     if (!work) return [];
     if (!work.isStatic) return [];
     return [work.thumbnail, ...(work.gallery ?? [])];
   }, [work]);
 
-  // Reset to first image whenever work changes
   useEffect(() => {
     setIdx(0);
   }, [work]);
 
-  // Keyboard: ESC to close, ← → to navigate
   useEffect(() => {
     if (!work) return;
     const onKey = (e: KeyboardEvent) => {
@@ -43,7 +40,6 @@ export default function Lightbox({ work, onClose }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   }, [work, images.length, onClose]);
 
-  // Lock body scroll while open
   useEffect(() => {
     if (!work) return;
     const prev = document.body.style.overflow;
@@ -78,7 +74,6 @@ export default function Lightbox({ work, onClose }: Props) {
             Close · Esc
           </button>
 
-          {/* Content – stopPropagation so inner clicks don't close */}
           <motion.div
             initial={{ scale: 0.96, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -87,7 +82,6 @@ export default function Lightbox({ work, onClose }: Props) {
             onClick={(e) => e.stopPropagation()}
             className="relative w-full max-w-[1200px] px-4 sm:px-8"
           >
-            {/* Media surface */}
             <div className="relative w-full overflow-hidden rounded-lg bg-black shadow-2xl">
               {!work.isStatic && work.youtubeId ? (
                 <div className="relative aspect-video w-full">
@@ -121,7 +115,6 @@ export default function Lightbox({ work, onClose }: Props) {
                       priority
                     />
                   </div>
-                  {/* Navigation arrows */}
                   {images.length > 1 && (
                     <>
                       <button
@@ -147,7 +140,6 @@ export default function Lightbox({ work, onClose }: Props) {
               )}
             </div>
 
-            {/* Caption */}
             <div className="mt-4 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-fg/75">
               <h3 className="text-lg font-semibold text-fg sm:text-xl">{work.title}</h3>
               {work.role && <span className="text-sm">{work.role}</span>}
@@ -159,7 +151,6 @@ export default function Lightbox({ work, onClose }: Props) {
               )}
             </div>
 
-            {/* Hint about placeholder video when only local mp4 is available */}
             {!work.isStatic && !work.youtubeId && work.localVideo && (
               <p className="mt-1 text-xs text-fg/40">
                 Local preview — set <code className="text-fg/70">youtubeId</code> in src/data/works.ts to use YouTube in production.

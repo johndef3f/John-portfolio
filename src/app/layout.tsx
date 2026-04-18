@@ -4,11 +4,11 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "沈習約 — 3D & Motion Portfolio",
+  title: "John — 3D & Motion Portfolio",
   description:
-    "Crafting stories through 3D, motion, and visual narrative. Selected works by 沈習約.",
+    "Crafting stories through 3D, motion, and visual narrative. Selected works by John (沈習約).",
   openGraph: {
-    title: "沈習約 — 3D & Motion Portfolio",
+    title: "John — 3D & Motion Portfolio",
     description: "Crafting stories through 3D, motion, and visual narrative.",
     type: "website",
   },
