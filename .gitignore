@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------
+# Paul Shen — Portfolio .gitignore
+# ---------------------------------------------------------------
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js build output
+/.next/
+/out/
+/build
+
+# Testing
+/coverage
+
+# Env / secrets
+.env*.local
+.env.production
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------------------------------------------------------------
+# Portfolio-specific
+# ---------------------------------------------------------------
+
+# Raw source footage — kept locally only (already outside repo, but
+# listed here as a safety net if ever moved inside).
+/raw_works/
+raw_works/
+
+# Optional: uncomment to exclude the local MP4 fallback videos from
+# the repo if it grows too large. When excluded, works without a
+# youtubeId will fall back to the image gallery inside the Lightbox.
+# /public/works/videos/
