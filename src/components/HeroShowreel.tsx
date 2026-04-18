@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const SHOWREEL_YT_ID = "JFbh9ymqGMk"; // <- replace with your real YouTube video ID
+const SHOWREEL_YT_ID: string = "JFbh9ymqGMk"; // <- replace with your real YouTube video ID
 
 const ytSrc = (id: string) =>
   `https://www.youtube-nocookie.com/embed/${id}` +
